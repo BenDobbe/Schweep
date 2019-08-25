@@ -1,0 +1,25 @@
+global-styling:
+  version: 1.x
+  css:
+    base:
+      css/bootstrap.css: {}
+      css/custom.css: {}
+      css/styles.css: {}
+    component:
+      css/magnific-popup.css: {}
+      css/swiper.css: {}
+    layout:
+      css/all.css: {}
+      'https://kit.fontawesome.com/bb643bcf88.js': {type: external}
+
+  js:
+    js/jquery.min.js: {}
+    js/bootstrap.min.js: {}
+    js/popper.min.js: {}
+    js/jquery.easing.min.js: {}
+    js/swiper.min.js: {}
+    js/jquery.magnific-popup.js: {}
+    js/morphext.min.js: {}
+    js/validator.min.js: {}
+    js/scripts.js: {}
+

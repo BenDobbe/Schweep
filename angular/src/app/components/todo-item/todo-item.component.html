@@ -1,0 +1,18 @@
+<div [ngClass]="setClasses()">
+  <p class="todo-item row">
+    <label class="check col s2">
+      <input
+        (change)="onToggle(todo)"
+        type="checkbox"
+        id="{{ todo.id }}"
+        [checked]="todo.completed"
+
+      />
+      <div class="box"></div>
+    </label>
+    <label class="todo-label col s8" for="{{ todo.id }}">
+      {{ todo.title }}
+    </label>
+    <button (click)="onDelete(todo)" class="del col s2">X</button>
+  </p>
+</div>

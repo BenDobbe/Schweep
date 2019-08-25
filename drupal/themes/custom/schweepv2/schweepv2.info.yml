@@ -1,0 +1,20 @@
+name: Schweepv2
+type: theme
+description: Schweepv2 is a custom theme made by bendob.
+core: 8.x
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  contact: 'Contact'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  footer: 'Footer'
+  social: 'Social'
+
+libraries:
+  - 'schweepv2/global-styling'

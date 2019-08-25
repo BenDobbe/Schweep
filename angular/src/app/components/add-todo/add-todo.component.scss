@@ -1,0 +1,30 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.form {
+  display: flex;
+}
+
+.form input[type='text'] {
+  flex: 10;
+  padding: 5px;
+  border: 2px solid $darkpurple;
+  border-radius: 20px;
+  height: 30px;
+  margin: 10px;
+  color: $lightpurple;
+  background-color: cornsilk;
+}
+
+.form input[type='submit'] {
+  flex: 2;
+  border: 2px solid $darkpurple;
+  border-radius: 20px;
+  margin: 10px;
+  background: cornsilk;
+}

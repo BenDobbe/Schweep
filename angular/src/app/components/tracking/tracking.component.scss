@@ -1,0 +1,162 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(1, auto);
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.form-group {
+  display: block;
+  float: left;
+  height: 100px;
+}
+
+.form input[type='datetime-local'] {
+  display: block;
+  flex: 10;
+  padding: 5px;
+  border: 2px solid $darkpurple;
+  border-radius: 20px;
+  height: 30px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: $lightpurple;
+  background-color: cornsilk;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  display: block;
+	width: 80%;
+	height: 30px;
+  background: cornsilk;
+  padding: 5px;
+  border: 2px solid $darkpurple;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+
+	&:focus {
+		outline: none;
+	}
+
+	//WEBKIT
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: $darkpurple;
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+		cursor: pointer;
+	}
+
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 4px;
+		background: $darkpurple;
+		border-radius: 3rem;
+		transition: all 0.5s;
+		cursor: pointer;
+	}
+
+	// IE
+
+	&::-ms-track {
+		width: 60%;
+		cursor: pointer;
+		height: 9px;
+
+		transition: all 0.5s;
+		/* Hides the slider so custom styles can be added */
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+
+	&::-ms-thumb {
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: $lightpurple;
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+		cursor: pointer;
+	}
+
+	&::-ms-fill-lower {
+		background: $darkpurple;
+		border-radius: 3rem;
+	}
+	&:focus::-ms-fill-lower {
+		background: $lightpurple;
+	}
+	&::-ms-fill-upper {
+		background: $darkpurple;
+		border-radius: 3rem;
+	}
+	&:focus::-ms-fill-upper {
+		background: $lightpurple;
+	}
+
+	//FIREFOX
+	&::-moz-range-thumb {
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		background: $darkpurple;
+		margin-top: -5px;
+		box-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+		cursor: pointer;
+	}
+
+	&::-moz-range-track {
+		width: 100%;
+		height: 4px;
+		background: $darkpurple;
+		border-radius: 3rem;
+		transition: all 0.5s;
+		cursor: pointer;
+	}
+}
+
+
+.form input[type='submit'] {
+  flex: 2;
+  color: $lightpurple;
+  width: 80%;
+  height: 50px;
+  border-radius: 20px;
+  margin: 0 auto;
+  background: $darkpurple;
+}
+
+.errors {
+  width: 300px;
+  margin: 0 auto;
+  background-color: $purple;
+  color: $lightpurple;
+  padding: 10px;
+  font-size: 0.75rem;
+  border: solid 1px $purple;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}

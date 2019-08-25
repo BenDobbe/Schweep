@@ -1,0 +1,95 @@
+/*body {
+  background: url('../images/background.svg') no-repeat;
+  background-size: cover;
+  padding-bottom: 500px;
+}*/
+
+#feature-1 {
+  content:url("../images//features-iphone-1.png");
+  height: 100%;
+  width: 100%;
+}
+
+#feature-2 {
+  content:url("../images//features-iphone-2.png");
+  height: 100%;
+  width: 100%;
+}
+
+#feature-3 {
+  content:url("../images//features-iphone-3.png");
+  height: 100%;
+  width: 100%;
+}
+
+#header-1{
+  content:url("../images//header-iphone.png");
+}
+
+#video-frame{
+  content:url("../images//video-frame.jpg");
+}
+
+#details-1{
+  content:url("../images//details-1-iphone.png");
+}
+
+#details-2{
+  content:url("../images//details-2-iphone.png");
+}
+
+#details-l-1{
+  content:url("../images//details-lightbox-1.png");
+}
+
+#details-l-2{
+  content:url("../images//details-lightbox-2.png");
+}
+
+#screenshot-1{
+  content:url("../images//screenshot-1.png");
+}
+
+#screenshot-2{
+  content:url("../images//screenshot-2.png");
+}
+
+#screenshot-3{
+  content:url("../images//screenshot-3.png");
+}
+
+#screenshot-4{
+  content:url("../images//screenshot-4.png");
+}
+
+#screenshot-5{
+  content:url("../images//screenshot-5.png");
+}
+
+#screenshot-6{
+  content:url("../images//screenshot-6.png");
+}
+
+#screenshot-7{
+  content:url("../images//screenshot-7.png");
+}
+
+#screenshot-8{
+  content:url("../images//screenshot-8.png");
+}
+
+#screenshot-9{
+  content:url("../images//screenshot-9.png");
+}
+
+#screenshot-10{
+  content:url("../images//screenshot-10.png");
+}
+
+#download{
+  content:url("../images//download.png");
+}
+
+#logo-navbar {
+  content:url("../logo.svg");
+}

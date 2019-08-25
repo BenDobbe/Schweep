@@ -1,0 +1,21 @@
+global-styling:
+  version: VERSION
+  js:
+    js/global.js: {}
+    js/bootstrap.js: {}
+    'https://code.jquery.com/jquery-3.3.1.slim.min.js': {type: external}
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js': {type: external}
+
+  css:
+    component:
+      css/style.css: {}
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': {type: external}
+      css/bootstrap.css: {}
+      css/bootstrap-grid.css: {}
+
+bootstrap:
+  js:
+    /includes/bootstrap/js/bootstrap.min.js: {}
+  css:
+    component:
+      /includes/bootstrap/css/bootstrap.min.css: {}

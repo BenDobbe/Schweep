@@ -1,0 +1,223 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+
+.title-page {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.subtitle-page {
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 0.9rem;
+  color: $lightpurple;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: $lightpurple;
+}
+
+/* Gallery Section */
+
+.gallery {
+  margin: -1rem -1rem;
+  padding-bottom: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item-info {
+  display: block;
+  height: 150px;
+  background-color: $darkpurple;
+  border-radius: 0 0 20px 20px;
+}
+
+.gallery-item-info img{
+  width: 18% !important;
+  height: 20%;
+}
+
+.icon-group {
+  margin-top: 50px;
+}
+
+.gallery-item-star {
+  float: right !important;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.gallery-item-comment {
+  float: left !important;
+  margin-left: 10px !important;
+  margin-top: 5px;
+}
+
+.gallery-item-info li {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.gallery-item-likes {
+  margin-right: 2.2rem;
+}
+
+.gallery-item-type {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.fa-clone,
+.fa-comment {
+  transform: rotateY(180deg);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* Base Styles */
+
+img {
+  display: block;
+}
+
+.container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@supports (display: grid) {
+  .profile {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: repeat(3, auto);
+      grid-column-gap: 3rem;
+      align-items: center;
+  }
+
+  .profile-image {
+      grid-row: 1 / -1;
+  }
+
+  .gallery {
+      display: grid;
+      grid-gap: 2rem;
+  }
+
+  .profile-image,
+  .profile-user-settings,
+  .profile-stats,
+  .profile-bio,
+  .gallery-item,
+  .gallery {
+      width: auto;
+      margin: 0;
+  }
+
+  @media (max-width: 40rem) {
+      .profile {
+          grid-template-columns: auto 1fr;
+          grid-row-gap: 1.5rem;
+      }
+
+      .profile-image {
+          grid-row: 1 / 2;
+      }
+
+      .profile-user-settings {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-gap: 1rem;
+      }
+
+      .profile-edit-btn,
+      .profile-stats,
+      .profile-bio {
+          grid-column: 1 / -1;
+      }
+
+      .profile-user-settings,
+      .profile-edit-btn,
+      .profile-settings-btn,
+      .profile-bio,
+      .profile-stats {
+          margin: 0;
+      }
+  }
+}
+
+.mobileShow {
+  display: none;
+}
+
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .mobileShow {
+    display: block;
+    width: 40%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin: 0 0 0 -20%;
+    text-align: center;
+  }
+
+  .mobileShow a {
+    text-decoration: none;
+    border: 2px solid $darkpurple;
+    border-radius: 50px;
+    padding: 20px;
+    color: $darkpurple;
+    background-color: $purple;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}

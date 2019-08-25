@@ -1,0 +1,8 @@
+<?php
+
+function mytheme_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform-submission-contact-add-form') {
+    $form['#attributes']['data-toggle'] = 'validator';
+    $form['#attributes']['data-focus'] = 'false';
+  }
+}

@@ -1,0 +1,33 @@
+<!--<div class="row" *ngIf="user">
+  <div class="col s12" *ngIf="user.acf">-->
+<div class="row">
+  <div class="col s12">
+    <form class="form">
+      <div class="form-group">
+        <div id="profile-container">
+          <!--<img class="avatar" *ngIf="user.acf.avatar; else placeholder" src="{{user.acf.avatar.url}}" />-->
+          <img id="profileImage" [src]="profileImage">
+        </div>
+        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+      </div>
+      <div class="form-group">
+        <label>Edit username</label>
+        <input type="text" name="title" placeholder="Jane Doe...">
+      </div>
+      <div class="form-group">
+        <label>Edit Surname</label>
+        <input type="text" name="title" placeholder="Jane">
+      </div>
+      <div class="form-group">
+        <label>Edit First name</label>
+        <input type="text" name="title" placeholder="Doe">
+      </div>
+      <div class="form-group description">
+        <label>Edit Description</label>
+        <input type="text" class="description" name="title" placeholder="Lorem ipsum baui sdof azela sddfijsio">
+      </div>
+      <input type="submit" value="Submit" class="btn">
+    </form>
+  </div>
+</div>
+

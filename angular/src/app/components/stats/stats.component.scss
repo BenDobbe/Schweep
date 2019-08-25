@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+
+.charts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  margin: 40px 0 20px;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.del {
+  background: $lightpurple;
+  color: $darkpurple;
+  border: none;
+  padding: 5px 9px !important;
+  height: 30px;
+  width: 30px !important;
+  border-radius: 50%;
+  cursor: pointer !important;
+  float: right !important;
+  margin-bottom: 15px !important;
+}
+
+.todo {
+  background: $darkpurple;
+  padding: 10px;
+  border-radius: 20px;
+  color: $lightpurple;
+  margin: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.todo-label {
+}
+
+.todo-item {
+  margin-top: 10px;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+
+  input {
+    display: none;
+    &:checked + .box {
+      background-color: $lightpurple;
+
+      &:after {
+        top: 0;
+      }
+    }
+  }
+
+  .box {
+    width: 20px;
+    height: 20px;
+    transition: all 1.1s cubic-bezier(.19,1,.22,1);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-color: cornsilk;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+      box-shadow: 0 5px rgba(0,0,0,.2);
+    &:after {
+      width: 50%;
+      height: 20%;
+      content: '';
+      position: absolute;
+      border-left: 7.5px solid;
+      border-bottom: 7.5px solid;
+      border-color: $darkpurple;
+      transform: rotate(-45deg) translate3d(0,0,0);
+      transform-origin: center center;
+      transition: all 1.1s cubic-bezier(.19,1,.22,1);
+      left: 0;
+      right: 0;
+      top: 200%;
+      bottom: 5%;
+      margin: auto;
+    }
+  }
+}
+
+.is-complete {
+  text-decoration: line-through;
+}

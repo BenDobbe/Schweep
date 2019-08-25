@@ -1,0 +1,145 @@
+@import "../../../variables.scss";
+@import "../../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(1, auto);
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.label-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.text-label {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  float: right;
+}
+
+.form-group {
+  display: block;
+  float: left;
+  height: 100px;
+}
+
+hr {
+  height: 3px;
+  background-color: $darkpurple;
+  margin-bottom: 20px;
+}
+
+.form input[type='submit'] {
+  flex: 2;
+  color: $lightpurple;
+  width: 80%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  margin: 0 auto;
+  background: $darkpurple;
+}
+
+.errors {
+  width: 300px;
+  margin: 0 auto;
+  background-color: $purple;
+  color: $lightpurple;
+  padding: 10px;
+  font-size: 0.75rem;
+  border: solid 1px $purple;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+ /* The switch - the box around the slider */
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $darkpurple;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $lightpurple;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $purple;
+}
+
+input:checked + .slider:before {
+  background-color: $darkpurple;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $purple;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

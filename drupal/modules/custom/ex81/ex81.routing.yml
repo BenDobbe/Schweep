@@ -1,0 +1,9 @@
+ex81.hello_form:
+  path: '/ex81/helloform'
+  defaults:
+    _form: 'Drupal\ex81\Form\HelloForm'
+    _title: 'Simple custom form'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE

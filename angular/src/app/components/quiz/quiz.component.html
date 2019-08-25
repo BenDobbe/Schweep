@@ -1,0 +1,25 @@
+<div class="main">
+  <section class="quiz quiz-wrapper" *ngFor="let question of questions">
+    <div class="row">
+      <div class="col s12 quiz-card">
+        <div class="question">{{ question.content }}</div>
+        <label class="radio-group" *ngFor="let option of question.options">
+            {{ option.content }}
+            <input class="radio-input" type="radio" [value]="option.value" [name]="question.name"/>
+            <div class="radio-indicator"></div>
+        </label>
+      </div>
+    </div>
+  </section>
+  <div class="errors" *ngIf="errors">{{ errors }}</div>
+  <button class="button-quiz" (click)="getResult()">Bekijk resultaat<span></span><span></span><span></span><span></span></button>
+  <div id="modal" class="modal">
+      <div *ngIf="type" class="modal-content">
+        <span (click)="closeModal()" class="close">&times;</span>
+        <h4>{{ type.title.rendered }}</h4>
+        <p [innerHTML]="type.caption.rendered"></p>
+        <img class="modal-image" [src]="type.media_details.sizes.thumbnail.source_url">
+        <button class="button-post" (click)="updateProfile()">Profiel bijwerken</button>
+      </div>
+    </div>
+</div>

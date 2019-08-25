@@ -1,0 +1,51 @@
+<div class="main">
+  <!--<div *ngFor="let tip of tips" class="tip" [ngClass]="tip.acf.type | lowercase">
+    <div *ngIf="tip.acf.type === 'Text'"><h4>Tip</h4><p>{{tip.acf.text}}</p>
+    </div>
+    <img *ngIf="tip.acf.type === 'Image'" src="{{tip.acf.image}}" alt="">
+    <iframe *ngIf="tip.acf.type === 'Video'" [src]="sanitize(tip.acf.video)" frameborder="0" allowfullscreen></iframe>
+    {{ console.log(tip.title.rendered) }}
+  </div>-->
+  <div class="row">
+    <div class="col s12">
+      <div class="title-page">
+        <h1>Tips & Tools</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4">
+      <button class="button-tips" (click)="toggleTips()">{{ buttonName }}<span></span><span></span><span></span><span></span></button>
+    </div>
+    <div class="col s4">
+      <button class="button-tips" (click)="toggleImages()">{{ buttonNameImage }}<span></span><span></span><span></span><span></span></button>
+    </div>
+    <div class="col s4">
+      <button class="button-tips" (click)="toggleVideos()">{{ buttonNameVideo }}<span></span><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="tip tips-wrapper">
+      <div *ngFor="let tip of tips" class="tip">
+          <div *ngIf="tip.content.rendered !== ''" class="row">
+            <div class="col s12 tips-card" *ngIf="show">
+              <h2>{{ tip.title.rendered }}</h2>
+              {{ tip.content.rendered }}
+            </div>
+          </div>
+      </div>
+    <div *ngFor="let tip of tips" class="tip">
+        <div *ngIf="tip.acf.videos !== '' && tip.acf.videos !== undefined" class="row">
+          <div class="col s12 video" *ngIf="showVideo">
+            <iframe [src]="sanitize(tip.acf.videos)" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+    </div>
+    <div *ngFor="let tip of tips" class="tip">
+        <div *ngIf="tip.acf.image !== false && tip.acf.image !== ''" class="row">
+          <div class="col s12 image" *ngIf="showImage">
+            <img src="{{ tip.acf.image }}">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

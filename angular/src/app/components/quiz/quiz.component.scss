@@ -1,0 +1,244 @@
+@import "../../variables.scss";
+@import "../../grid.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.title-page {
+  margin-top: 20px;
+}
+
+.tip {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.quiz-wrapper {
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+.quiz-wrapper img {
+  max-width: 50% !important;
+}
+
+.quiz-card {
+  border: 2px solid $darkpurple;
+  border-radius: 20px;
+  background: cornsilk;
+  padding: 20px !important;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $lightpurple;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-group {
+  background-color: $purple;
+  padding: 15px;
+  box-shadow: 5px 5px 5px 0px $darkpurple;
+  margin: 10px;
+  color: $white;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.radio-group {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.radio-group input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio-indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #e6e6e6;
+}
+
+.radio-group .radio-indicator {
+  border-radius: 50%;
+}
+
+/* Checked state */
+.radio-group input:checked ~ .radio-indicator {
+  background: $darkpurple;
+}
+
+
+/* Check mark */
+.radio-indicator:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+/* Show check mark */
+.radio-group input:checked ~ .radio-indicator:after {
+  display: block;
+}
+
+/* Radio button inner circle */
+.radio-group .radio-indicator:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding:16px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  align-self: flex-end;
+  color: $darkpurple;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content * {
+  margin-bottom: 20px;
+}
+
+.button-quiz {
+  width: 100%;
+  padding: 15px;
+  color: $lightpurple;
+  background-color: $darkpurple;
+  border: solid 0.3em $darkpurple;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.button-quiz span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: $lightpurple;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.button-quiz:hover, .button-quiz:focus {
+  color: $darkpurple;
+}
+
+.button-quiz:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.button-quiz span:nth-child(1) {
+  --n: 1;
+}
+
+.button-quiz span:nth-child(2) {
+  --n: 2;
+}
+
+.button-quiz span:nth-child(3) {
+  --n: 3;
+}
+
+.button-quiz span:nth-child(4) {
+  --n: 4;
+}
+
+.errors {
+  width: 300px;
+  margin: 0 auto;
+  background-color: $darkpurple;
+  color: $lightpurple;
+  padding: 10px;
+  font-size: 0.75rem;
+  border: solid 1px $darkpurple;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}

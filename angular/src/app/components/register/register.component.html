@@ -1,0 +1,52 @@
+<div class="register">
+  <div class="row">
+    <div class="logo-group col s12">
+      <img class="logo" src="assets/Logo-fox.png">
+      <div class="logo-text">Schweep</div>
+    </div>
+  </div>
+  <div *ngIf="errors" class="errors">
+      {{ errors }}
+  </div>
+  <form class="form-register" [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="username">Gebruikersnaam</label><br>
+      <input type="username" name="username" formControlName="username">
+    </div>
+    <div class="form-group">
+      <label for="firstname">Voornaam</label><br>
+      <input type="firstname" name="firstname" formControlName="firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Achternaam</label><br>
+      <input type="lastname" name="lastname" formControlName="lastname">
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label><br>
+      <input type="email" name="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Wachtwoord</label><br>
+      <input type="password" name="password" formControlName="password">
+    </div>
+    <div class="form-group">
+      <label for="password2">Wachtwoord opnieuw invoeren</label><br>
+      <input type="password" name="password2" formControlName="password2">
+    </div>
+    <button class="button-register">Register<span></span><span></span><span></span><span></span></button>
+  </form>
+  <div class="bottom-text">Al een gebruiker?</div>
+  <a class="bottom-text" routerLink="/login">INLOGGEN</a>
+  <div id="Clouds">
+  <div class="Cloud Foreground"></div>
+  <div class="Cloud Background"></div>
+  <div class="Cloud Foreground"></div>
+  <div class="Cloud Background"></div>
+  <div class="Cloud Foreground"></div>
+  <div class="Cloud Background"></div>
+  <div class="Cloud Background"></div>
+  <div class="Cloud Foreground"></div>
+  <div class="Cloud Background"></div>
+  <div class="Cloud Background"></div>
+<!--  <svg viewBox="0 0 40 24" class="Cloud"><use xlink:href="#Cloud"></use></svg>-->
+</div>
